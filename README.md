@@ -1,5 +1,20 @@
 # AmiiboImageTool
 
+get npm version using [nvm](https://github.com/creationix/nvm) with the following commands:
+
+```shell
+$ nvm install
+$ nvm use
+```
+
+then install angular cli:
+```shell
+npm install -g @angular/cli
+```
+
+-------
+*Angular CLI generated README below*
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
