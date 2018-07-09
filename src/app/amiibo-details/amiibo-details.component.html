@@ -1,0 +1,25 @@
+<div class="amiibo-detail">
+  <div class="amiibo-image">
+    <img [src]="amiibo.image"/>
+  </div>
+  <div class="amiibo-details">
+    <div class="amiibo-name">
+      {{ amiibo.name }}
+    </div>
+    <div class="amiibo-character">
+      {{ amiibo.character }}
+    </div>
+    <div class="amiibo-game-series">
+      {{ amiibo.gameSeries }}
+    </div>
+    <div class="amiibo-amiibo-series">
+      {{ amiibo.amiiboSeries }}
+    </div>
+    <div *ngIf="amiibo.release" class="amiibo-release-date">
+      {{ amiibo.release.na }}
+    </div>
+    <div class="amiibo-type">
+      {{ amiibo.type }}
+    </div>
+  </div>
+</div>

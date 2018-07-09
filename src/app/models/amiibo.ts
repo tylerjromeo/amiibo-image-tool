@@ -1,5 +1,5 @@
 export interface AmiiboResponse {
-    amiibo: Amiibo[]
+    amiibo: Amiibo[];
 }
 
 export interface Amiibo {
@@ -9,15 +9,22 @@ export interface Amiibo {
     head: string; // The 1st 8 value of the hexadecimal to recognize the amiibo. Note: 0-7 value in the hexadecimal
     image: string; // The image link of the amiibo.
     name: string; // The name of the amiibo.
-    release?: string; // The release date for North America, Japan, Europe and Australia. Date Format: yyyy-mm-dd
+    release?: ReleaseDates; // The release date for North America, Japan, Europe and Australia. Date Format: yyyy-mm-dd
     tail: string; // The next 8 value of the hexadecimal to recognize the amiibo. Note: 8-15 value in the hexadecimal
-    type: AmiiboType; // The type it belongs to. Example: card, figure and yarn 
+    type: AmiiboType; // The type it belongs to. Example: card, figure and yarn
+}
+
+export interface ReleaseDates {
+    au?: string;
+    eu?: string;
+    jp?: string;
+    na?: string;
 }
 
 enum AmiiboType {
-    Card = "card",
-    Figure = "figure",
-    Yarn = "yarn"
+    Card = 'card',
+    Figure = 'figure',
+    Yarn = 'yarn'
 }
 
 

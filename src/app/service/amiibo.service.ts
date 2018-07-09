@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { from } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { Amiibo, AmiiboResponse } from '../models/amiibo';
 
@@ -14,8 +14,8 @@ export class AmiiboService {
 
   constructor(private http: HttpClient) { }
 
-  getAllAmiibo(): Observable<Amiibo> {
+  getAllAmiibo(): Observable<Amiibo[]> {
     return this.http.get<AmiiboResponse>(this.API_URL)
-      .pipe(mergeMap((response: AmiiboResponse) => from<Amiibo>(response.amiibo)));
+      .pipe(map((response: AmiiboResponse) => response.amiibo));
   }
 }

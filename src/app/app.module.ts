@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { AmiiboDetailsComponent } from './amiibo-details/amiibo-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AmiiboDetailsComponent
   ],
   imports: [
     BrowserModule,
