@@ -1,25 +1,19 @@
-<div class="amiibo-detail">
-  <div class="amiibo-image">
-    <img [src]="amiibo.image"/>
-  </div>
-  <div class="amiibo-details">
-    <div class="amiibo-name">
-      {{ amiibo.name }}
-    </div>
-    <div class="amiibo-character">
-      {{ amiibo.character }}
-    </div>
-    <div class="amiibo-game-series">
-      {{ amiibo.gameSeries }}
-    </div>
-    <div class="amiibo-amiibo-series">
-      {{ amiibo.amiiboSeries }}
-    </div>
-    <div *ngIf="amiibo.release" class="amiibo-release-date">
-      {{ amiibo.release.na }}
-    </div>
-    <div class="amiibo-type">
-      {{ amiibo.type }}
-    </div>
-  </div>
+<div class="card amiibo-detail">
+  <img class="card-img-top" [src]="amiibo.image"/>
+  <dl class="row amiibo-details">
+    <dt class="col-sm-3">Name</dt>
+    <dd class="col-sm-9">{{ amiibo.name }}</dd>
+    <dt class="col-sm-3">Character</dt>
+    <dd class="col-sm-9">{{ amiibo.character }}</dd>
+    <dt class="col-sm-3">Game Series</dt>
+    <dd class="col-sm-9">{{ amiibo.gameSeries }}</dd>
+    <dt class="col-sm-3">Amiibo Series</dt>
+    <dd class="col-sm-9">{{ amiibo.amiiboSeries }}</dd>
+    <ng-template [ngIf]="amiibo.release">
+    <dt class="col-sm-3">Release Date (NA)</dt>
+    <dd class="col-sm-9">{{ amiibo.release.na }}</dd>
+    </ng-template>
+    <dt class="col-sm-3">Type</dt>
+    <dd class="col-sm-9">{{ amiibo.type }}</dd>
+  </dl>
 </div>
