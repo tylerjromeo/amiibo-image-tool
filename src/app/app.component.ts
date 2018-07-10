@@ -4,7 +4,7 @@ import { Amiibo } from './models/amiibo';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
+  selector: 'amiibo-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
