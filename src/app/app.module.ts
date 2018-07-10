@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AmiiboDetailsComponent } from './amiibo-details/amiibo-details.component';
+import { AmiiboPrintableComponent } from './amiibo-printable/amiibo-printable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AmiiboDetailsComponent
+    AmiiboDetailsComponent,
+    AmiiboPrintableComponent
   ],
   imports: [
     BrowserModule,
