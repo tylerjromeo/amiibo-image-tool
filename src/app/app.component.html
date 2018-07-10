@@ -1,2 +1,4 @@
 <h1>Amiibo List</h1>
-<amiibo-printable *ngFor="let amiibo of amiibos$ | async | slice:0:10" [amiibo]="amiibo"></amiibo-printable>
+<div class="print-container">
+    <amiibo-printable *ngFor="let amiibo of amiibos$ | async | slice:0:10" [amiibo]="amiibo"></amiibo-printable>
+</div>
