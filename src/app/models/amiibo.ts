@@ -27,4 +27,8 @@ enum AmiiboType {
     Yarn = 'yarn'
 }
 
+export function getId(amiibo: Amiibo): string {
+    return amiibo.head + '-' + amiibo.tail;
+}
+
 
